@@ -9,9 +9,9 @@ import {
 import AddTaskForm from '../../features/addTask/AddTaskForm'
 import FilterButtons from '../../features/filterTasks/FilterButtons'
 import SearchInput from '../../features/searchTasks/SearchInput'
-import EmptyState from '../../widgets/EmptyState'
+import EmptyState from '../../widgets/emptyState/EmptyState'
 import TaskList from '../../widgets/taskList/TaskList'
-import TasksNotFound from '../../widgets/TasksNotFound'
+import TasksNotFound from '../../widgets/tasksNotFound/TasksNotFound'
 import { selectFilteredTasks } from './model/selectors'
 import styles from './TaskPage.module.css'
 
@@ -32,7 +32,7 @@ const TasksPage = () => {
 
 			{loading && <p>Loading...</p>}
 
-			{error && <p style={{ color: 'red' }}>{error}</p>}
+			{error && <p className={styles.error}>{error}</p>}
 
 			{!hasTasks && !loading && <EmptyState />}
 

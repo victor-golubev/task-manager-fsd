@@ -4,18 +4,19 @@ import styles from './FilterButtons.module.css'
 import type { Filter } from './filterSlice'
 import { selectFilter, setFilter } from './filterSlice'
 
+const FILTER_BUTTONS: { label: string; value: Filter }[] = [
+	{ label: 'Все', value: 'all' },
+	{ label: 'Активные', value: 'active' },
+	{ label: 'Завершенные', value: 'completed' }
+]
+
 const FilterButtons = () => {
 	const dispatch = useDispatch<AppDispatch>()
 	const activeFilter = useSelector(selectFilter)
 
-	const buttons: { label: string; value: Filter }[] = [
-		{ label: 'Все', value: 'all' },
-		{ label: 'Активные', value: 'active' },
-		{ label: 'Завершенные', value: 'completed' }
-	]
 	return (
 		<div className={styles.filters}>
-			{buttons.map(button => (
+			{FILTER_BUTTONS.map(button => (
 				<button
 					key={button.value}
 					onClick={() => dispatch(setFilter(button.value))}

@@ -1,0 +1,7 @@
+import styles from './TasksNotFound.module.css'
+
+const TasksNotFound = () => {
+	return <div className={styles.empty}>🔍 Задачи не найдены</div>
+}
+
+export default TasksNotFound

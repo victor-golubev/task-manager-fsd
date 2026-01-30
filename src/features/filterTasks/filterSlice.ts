@@ -1,4 +1,8 @@
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import {
+	createSelector,
+	createSlice,
+	type PayloadAction
+} from '@reduxjs/toolkit'
 import type { RootState } from '../../app/store'
 
 export type Filter = 'all' | 'completed' | 'active'
@@ -23,6 +27,11 @@ const filterSlice = createSlice({
 
 export const { setFilter } = filterSlice.actions
 
-export const selectFilter = (state: RootState) => state.filter.filter
-
 export default filterSlice.reducer
+
+export const selectFilterState = (state: RootState) => state.filter
+
+export const selectFilter = createSelector(
+	selectFilterState,
+	filter => filter.filter
+)
