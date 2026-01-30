@@ -1,0 +1,59 @@
+.item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.8em 1.2em;
+	border-radius: 8px;
+	background: #383838;
+	cursor: pointer;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-grow: 1;
+	cursor: pointer;
+}
+
+.checkbox {
+	cursor: pointer;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+.actions {
+	display: flex;
+	gap: 6px;
+}
+
+.btn {
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.input {
+	padding: 0 5px;
+	font-family: inherit;
+	margin-left: 28px;
+	font-size: 1em;
+	line-height: 1.5;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}

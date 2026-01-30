@@ -1,0 +1,51 @@
+import { useDispatch, useSelector } from 'react-redux'
+import type { AppDispatch } from '../../app/store'
+import { deleteTask, toggleTask, updateTask } from '../../entities/task'
+import {
+	selectError,
+	selectHasTasks,
+	selectLoading
+} from '../../entities/task/selectors'
+import AddTaskForm from '../../features/addTask/AddTaskForm'
+import FilterButtons from '../../features/filterTasks/FilterButtons'
+import SearchInput from '../../features/searchTasks/SearchInput'
+import EmptyState from '../../widgets/EmptyState'
+import TaskList from '../../widgets/taskList/TaskList'
+import TasksNotFound from '../../widgets/TasksNotFound'
+import { selectFilteredTasks } from './model/selectors'
+import styles from './TaskPage.module.css'
+
+const TasksPage = () => {
+	const dispatch = useDispatch<AppDispatch>()
+	const tasks = useSelector(selectFilteredTasks)
+	const loading = useSelector(selectLoading)
+	const error = useSelector(selectError)
+	const hasTasks = useSelector(selectHasTasks)
+
+	return (
+		<div className={styles.page}>
+			<h1 className={styles.title}>Task Manager</h1>
+
+			<AddTaskForm />
+			<SearchInput />
+			<FilterButtons />
+
+			{loading && <p>Loading...</p>}
+
+			{error && <p style={{ color: 'red' }}>{error}</p>}
+
+			{!hasTasks && !loading && <EmptyState />}
+
+			{!tasks.length && hasTasks && <TasksNotFound />}
+
+			<TaskList
+				tasks={tasks}
+				toggleTask={id => dispatch(toggleTask(id))}
+				deleteTask={id => dispatch(deleteTask(id))}
+				updateTask={(id, title) => dispatch(updateTask({ id, title }))}
+			/>
+		</div>
+	)
+}
+
+export default TasksPage
