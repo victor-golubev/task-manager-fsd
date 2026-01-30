@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-import type { Task } from '../../../entities/task/'
-import styles from './TaskItem.module.css'
+import type { Task } from '../../entities/task'
+import styles from './TaskItemEditor.module.css'
 
 type Props = {
 	task: Task

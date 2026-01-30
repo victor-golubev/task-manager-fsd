@@ -1,6 +1,6 @@
 .list {
-	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 0.5rem; /* вертикальные отступы между задачами */
+	margin-top: 1rem;
 }

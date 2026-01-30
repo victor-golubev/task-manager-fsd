@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import taskReducer from '../entities/task/taskSlice'
 import filterReducer from '../features/filterTasks/filterSlice'
 import searchReducer from '../features/searchTasks/searchSlice'
+import themeReducer from '../features/theme/themeSlice'
 
 export const store = configureStore({
 	reducer: {
 		task: taskReducer,
 		filter: filterReducer,
-		search: searchReducer
+		search: searchReducer,
+		theme: themeReducer
 	}
 })
 

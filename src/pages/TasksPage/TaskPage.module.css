@@ -1,14 +1,39 @@
 .page {
+	position: relative;
 	max-width: 600px;
-	margin: 40px auto;
-	padding: 20px;
+	margin: 60px auto 0;
+	padding: 3rem 2rem;
+	background-color: var(--color-page-bg);
+	color: var(--color-text);
+	display: flex;
+	flex-direction: column;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
 }
 
 .title {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
 	text-align: center;
-	margin-bottom: 20px;
+	color: var(--color-text);
 }
 
 .error {
-	color: 'red';
+	color: #ff6b6b;
+	background-color: rgba(255, 107, 107, 0.1);
+	padding: 0.75rem 1rem;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+
+p {
+	margin: 0;
+	font-size: 1rem;
 }

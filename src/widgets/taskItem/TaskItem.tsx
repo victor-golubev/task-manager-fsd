@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import type { Task } from '../../../entities/task'
 import TaskItemView from './TaskItemView'
 import TaskItemEditor from './TaskItemEditor'
 import styles from './TaskItem.module.css'
+import type { Task } from '../../entities/task'
 
 type Props = {
 	task: Task

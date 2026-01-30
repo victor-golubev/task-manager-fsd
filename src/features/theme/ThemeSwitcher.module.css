@@ -1,0 +1,19 @@
+.switch {
+	position: absolute;
+	top: 3.5rem;
+	right: 2rem;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	background-color: var(--color-switch-bg);
+	border: 1px solid transparent;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+}
+
+.switch:hover {
+	background-color: var(--color-switch-bg-hover);
+}

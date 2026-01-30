@@ -9,6 +9,7 @@ import {
 import AddTaskForm from '../../features/addTask/AddTaskForm'
 import FilterButtons from '../../features/filterTasks/FilterButtons'
 import SearchInput from '../../features/searchTasks/SearchInput'
+import ThemeSwitcher from '../../features/theme/ThemeSwitcher'
 import EmptyState from '../../widgets/emptyState/EmptyState'
 import TaskList from '../../widgets/taskList/TaskList'
 import TasksNotFound from '../../widgets/tasksNotFound/TasksNotFound'
@@ -24,6 +25,7 @@ const TasksPage = () => {
 
 	return (
 		<div className={styles.page}>
+			<ThemeSwitcher />
 			<h1 className={styles.title}>Task Manager</h1>
 
 			<AddTaskForm />
