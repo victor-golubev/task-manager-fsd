@@ -1,11 +1,11 @@
 .empty {
-	padding: 2rem;
+	padding: 1.2rem;
 	text-align: center;
 	font-size: 1.2rem;
 	color: var(--color-text);
 	background-color: rgba(77, 85, 238, 0.1);
 	border-radius: 8px;
-	margin: 1rem 0;
+	margin-top: 1rem;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	-ms-border-radius: 8px;

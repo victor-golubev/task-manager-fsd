@@ -40,12 +40,14 @@ const TasksPage = () => {
 
 			{!tasks.length && hasTasks && <TasksNotFound />}
 
-			<TaskList
-				tasks={tasks}
-				toggleTask={id => dispatch(toggleTask(id))}
-				deleteTask={id => dispatch(deleteTask(id))}
-				updateTask={(id, title) => dispatch(updateTask({ id, title }))}
-			/>
+			{tasks.length > 0 && hasTasks && (
+				<TaskList
+					tasks={tasks}
+					toggleTask={id => dispatch(toggleTask(id))}
+					deleteTask={id => dispatch(deleteTask(id))}
+					updateTask={(id, title) => dispatch(updateTask({ id, title }))}
+				/>
+			)}
 		</div>
 	)
 }
